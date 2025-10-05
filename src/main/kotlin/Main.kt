@@ -7,8 +7,8 @@ private const val SITE =
 fun main() {
 
     val doc = Jsoup.connect(SITE).get()
-    val something: Elements = doc.select(".sc-2aegk7-2.bzpNIu")
-    for (i in something) {
-        println(i.text())
+    val elements: Elements = doc.select("article")
+    for (element in elements) {
+        println(element.text())
     }
 }
